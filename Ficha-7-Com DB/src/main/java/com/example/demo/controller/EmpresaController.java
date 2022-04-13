@@ -67,6 +67,7 @@ public class EmpresaController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(sr);
     }
 
+    // Nao deve ser feito assim, um get não deve ter body, no entanto não da erro no backend
     @GetMapping("/geEmpresaById")
     public ResponseEntity<SimpleResponse> getEmpresa(@RequestBody Empresa empresa){
         GetEmpresaResponse ger = new GetEmpresaResponse();

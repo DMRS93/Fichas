@@ -56,6 +56,7 @@ public class PessoaController {
         }
     }
 
+    // Nao deve ser feito assim, um get não deve ter body, no entanto não da erro no backend
     @GetMapping("/getPessoa")
     public ResponseEntity<GetPessoaResponse> getPessoaById (@RequestBody Pessoa pessoa){
         GetPessoaResponse sr = new GetPessoaResponse();
